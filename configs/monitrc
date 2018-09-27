@@ -1,0 +1,34 @@
+
+set daemon  30
+ set logfile syslog facility log_daemon
+ set idfile /var/run/monit/monit.id
+ set statefile /var/run/monit/monit.state
+
+
+set mmonit https://user:password@monitor.domain.com/collector
+
+set mailserver email-smtp.us-east-1.amazonaws.com port 25 username "XXXXXX" password "XXXXX" using TLSV1,
+    localhost
+
+set alert alerts@domain.com  but not on { instance } with mail-format {
+    from: alerts@domain.com
+    reply-to: alerts@domain.com
+    subject: $HOST $EVENT at $DATE
+} 
+
+
+set httpd port 2812 and
+   allow 127.0.0.1            # LocalHost                  
+   allow x.x.x.x/24           # Remote Subnet
+   allow admin:password       
+
+
+check system server001.domain.com
+    if loadavg (1min) > 4 then alert
+    if loadavg (5min) > 3 then alert
+    if memory usage > 75% then alert
+    if cpu usage (user) > 70% then alert
+    if cpu usage (system) > 20% then alert
+    if cpu usage (wait) > 20% then alert
+
+include /etc/monit.d/*.conf
