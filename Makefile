@@ -1,6 +1,4 @@
 
-GOPATH := ${PWD}
-export GOPATH
 
 TARGETS = bin/mysql-replication-monitor bin/mxtoolbox-blacklist-monitor
 
@@ -10,10 +8,10 @@ all: $(TARGETS)
 
 bin/mysql-replication-monitor:
 	go get github.com/go-sql-driver/mysql
-	go build ${GOFLAGS} -o $@ cmd/mysql-replication-monitor/main.go
+	go build ${GOFLAGS} -o $@ github.com/ubogdan/monit-tools/cmd/mysql-replication-monitor
 
 bin/mxtoolbox-blacklist-monitor:
-	go build ${GOFLAGS} -o $@ cmd/mxtoolbox-blacklist-monitor/main.go
+	go build ${GOFLAGS} -o $@ github.com/ubogdan/monit-tools/cmd/mysql-replication-monitor
 
 clean:
 	rm bin/*
