@@ -16,7 +16,7 @@ check program mysql-replication with path "/usr/local/bin/mysql-replication-moni
      if status != 0 then alert
 ```
 
-### MxToolbox
+### MxToolbox DNS Blacklist monitor
 
 ##### Monit configuration
 Create file /etc/monit.d/blacklist.conf with content
