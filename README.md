@@ -8,5 +8,6 @@ This repo contains configuration files and additional software to help you confi
 ### Additional software
 - MYSQL/MariaDB replication watcher
 - DNS blacklist monitor
+- Abuseipdb.com blacklist monitor
 
 For more info [see](https://ubogdan.github.io/monit-tools/).
