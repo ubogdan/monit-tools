@@ -1,0 +1,44 @@
+repo_name: ubogdan/monit-tools
+report_id: 1251c893d0cb72437dbb5d73ea07e5d9
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-04T15:14:28+00:00'
+requested_by: ubogdan
+provider: github
+branch: master
+detected_tools_count: 3
+tools:
+- name: Golang
+  description: An open source programming language that makes it easy to build simple,
+    reliable, and efficient software
+  website_url: http://golang.org/
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1005/O6AczwfV_400x400.png
+  detection_source_url: https://github.com/ubogdan/monit-tools
+  detection_source: Repo Metadata
+- name: MySQL
+  description: The world's most popular open source database
+  website_url: http://www.mysql.com
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1025/logo-mysql-170x170.png
+  detection_source_url: https://github.com/ubogdan/monit-tools/blob/master/cmd/mysql-replication-monitor/go.mod
+  detection_source: cmd/mysql-replication-monitor/go.mod
+  last_updated_by: Bogdan U
+  last_updated_on: 2019-03-07 20:18:24.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/ubogdan/monit-tools
+  detection_source: Repo Metadata
